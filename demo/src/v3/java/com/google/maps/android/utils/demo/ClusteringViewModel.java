@@ -44,7 +44,7 @@ public class ClusteringViewModel extends ViewModel {
     }
 
     void readItems(Resources resources) throws JSONException {
-        InputStream inputStream = resources.openRawResource(R.raw.radar_search);
+        InputStream inputStream = resources.openRawResource(R.raw.daily_meters);
         List<MyItem> items = new MyItemReader().read(inputStream);
         mAlgorithm.lock();
         try {

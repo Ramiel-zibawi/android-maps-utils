@@ -26,6 +26,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.clustering.ClusterManager;
+import com.google.maps.android.utils.demo.model.CustomClusterRenderer;
 import com.google.maps.android.utils.demo.model.MyItem;
 
 import org.json.JSONException;
@@ -42,11 +43,11 @@ public class ClusteringDemoActivity extends BaseDemoActivity {
     @Override
     protected void startDemo(boolean isRestore) {
         if (!isRestore) {
-            getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(51.503186, -0.126446), 10));
+            getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(40.7476, -74.0581), 10));
         }
-
         mClusterManager = new ClusterManager<>(this, getMap());
         getMap().setOnCameraIdleListener(mClusterManager);
+        mClusterManager.setRenderer(new CustomClusterRenderer(ClusteringDemoActivity.this, getMap(), mClusterManager));
 
         // Add a custom InfoWindowAdapter by setting it to the MarkerManager.Collection object from
         // ClusterManager rather than from GoogleMap.setInfoWindowAdapter
@@ -79,7 +80,7 @@ public class ClusteringDemoActivity extends BaseDemoActivity {
     }
 
     private void readItems() throws JSONException {
-        InputStream inputStream = getResources().openRawResource(R.raw.radar_search);
+        InputStream inputStream = getResources().openRawResource(R.raw.daily_meters);
         List<MyItem> items = new MyItemReader().read(inputStream);
         mClusterManager.addItems(items);
     }

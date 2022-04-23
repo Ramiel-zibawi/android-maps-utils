@@ -40,22 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mListView = findViewById(R.id.list);
 
-        addDemo("Clustering", ClusteringDemoActivity.class);
-        addDemo("Clustering: Custom Look", CustomMarkerClusteringDemoActivity.class);
-        addDemo("Clustering: 2K markers", BigClusteringDemoActivity.class);
-        addDemo("Clustering: 20K only visible markers", VisibleClusteringDemoActivity.class);
-        addDemo("Clustering: ViewModel", ClusteringViewModelDemoActivity.class);
-        addDemo("Clustering: Force on Zoom", ZoomClusteringDemoActivity.class);
-        addDemo("PolyUtil.decode", PolyDecodeDemoActivity.class);
-        addDemo("PolyUtil.simplify", PolySimplifyDemoActivity.class);
-        addDemo("IconGenerator", IconGeneratorDemoActivity.class);
-        addDemo("SphericalUtil.computeDistanceBetween", DistanceDemoActivity.class);
-        addDemo("Generating tiles", TileProviderAndProjectionDemo.class);
-        addDemo("Heatmaps", HeatmapsDemoActivity.class);
-        addDemo("Heatmaps with Places API", HeatmapsPlacesDemoActivity.class);
-        addDemo("GeoJSON Layer", GeoJsonDemoActivity.class);
-        addDemo("KML Layer Overlay", KmlDemoActivity.class);
-        addDemo("Multi Layer", MultiLayerDemoActivity.class);
+        addDemo("Clustering Per Officer", ClusteringDemoActivity.class);
+        addDemo("All Meters Clustered", BigClusteringDemoActivity.class);
+
     }
 
     private void addDemo(String demoName, Class<? extends Activity> activityClass) {

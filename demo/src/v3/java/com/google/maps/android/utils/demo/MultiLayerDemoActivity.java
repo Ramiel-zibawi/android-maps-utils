@@ -145,7 +145,7 @@ public class MultiLayerDemoActivity extends BaseDemoActivity {
     }
 
     private void addClusterItems(ClusterManager clusterManager) {
-        InputStream inputStream = getResources().openRawResource(R.raw.radar_search);
+        InputStream inputStream = getResources().openRawResource(R.raw.daily_meters);
         List<MyItem> items;
         try {
             items = new MyItemReader().read(inputStream);

@@ -72,30 +72,7 @@ Improvements made in version [1.0.0](https://github.com/googlemaps/android-maps-
 
 Click events originate in the layer-specific object that added the marker/ground overlay/polyline/polygon. In each layer, the click handlers are passed to the marker, ground overlay, polyline, or polygon `Collection` object.
 
-```java
-// Clustering
-ClusterManager<ClusterItem> clusterManager = // Initialize ClusterManager - if you're using multiple maps features, use the constructor that passes in Manager objects (see next section)
-clusterManager.setOnClusterItemClickListener(item -> {
-    // Listen for clicks on a cluster item here
-    return false;
-});
-clusterManager.setOnClusterClickListener(item -> {
-    // Listen for clicks on a cluster here
-    return false;
-});
 
-// GeoJson
-GeoJsonLayer geoJsonLayer = // Initialize GeoJsonLayer - if you're using multiple maps features, use the constructor that passes in Manager objects (see next section)
-geoJsonLayer.setOnFeatureClickListener(feature -> {
-    // Listen for clicks on GeoJson features here
-});
-
-// KML
-KmlLayer kmlLayer = // Initialize KmlLayer - if you're using multiple maps features, use the constructor that passes in Manager objects (see next section)
-kmlLayer.setOnFeatureClickListener(feature -> {
-    // Listen for clicks on KML features here
-});
-```
 
 #### Using Manager Objects
 

@@ -118,7 +118,7 @@ public class HeatmapsDemoActivity extends BaseDemoActivity {
         spinner.setOnItemSelectedListener(new SpinnerActivity());
 
         try {
-            mLists.put(getString(R.string.police_stations), new DataSet(readItems(R.raw.police),
+            mLists.put(getString(R.string.police_stations), new DataSet(readItems(R.raw.AllMeters),
                     getString(R.string.police_stations_url)));
             mLists.put(getString(R.string.medicare), new DataSet(readItems(R.raw.medicare),
                     getString(R.string.medicare_url)));
